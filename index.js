@@ -95,7 +95,15 @@
 //   a: x,
 //   b: y
 // };
-// console.log(myObject);
+// "10" will be reassignt  to 20 -> we can use let or var
+// "true" and "myObject" will NOT be reassignt, so we can use const
+let x = 10;
+const y = true;
+const myObject = {
+    a: x,
+    b: y
+}
+console.log(myObject);
 // /**
 //  * {a: 10, b: true, __proto__: Object}
 //  */
@@ -106,7 +114,13 @@
 //   b: y,
 //   c: myObject
 // };
-// console.log(anotherObject);
+x = 20;
+let anotherObject = {
+    newA: x,
+    b: y,
+    c: myObject
+}
+console.log(anotherObject);
 // /**
 //  * {
 //  * newA: 20,
