@@ -3,6 +3,12 @@
 //  * 
 //  * Simplest function in JavaScript
 //  */
+
+function myFn(){}
+console.log(myFn);
+const res = myFn();
+console.log(res); //undefined
+
 // function myFunction() {}
 
 // console.log(myFunction); // myFunction() {}
@@ -22,6 +28,19 @@
 //  * 
 //  * Parameters of the function
 //  */
+
+function runMarathon(km, ml){
+    console.log(km);
+    console.log(ml);
+}
+runMarathon(100, 20); // 100, 20
+runMarathon(true, null); // true, null
+runMarathon(); // undefined,  undefined
+runMarathon("not a runner"); //  not a runner, undefined
+runMarathon("not a runner"); //  not a runner, undefined
+console.log(runMarathon(70, 50)); //  undefined -> there is NO RETURN statement in function
+
+
 // function myFunction(a, b) {
 //   console.log(a);
 //   console.log(b);
@@ -42,6 +61,14 @@
 //  * 
 //  * Function scope
 //  */
+
+function time(st, min){
+    console.log(st, min);
+}
+
+console.log(time(3,15)); // 3, 15, undefined -> function doesn`t have return statement
+// console.log(st); // Uncaught ReferenceError: st is not defined -> cannot access parameters outside of the function -> will STOP the execution of the code
+
 // function myFunction(a, b) {
 //   console.log(a, b);
 // }
@@ -56,6 +83,21 @@
 //  * 
 //  * Reuse parameter names
 //  */
+
+function sameParam1(a,b){
+    console.log(a,b);
+}
+
+function sameParam2(a,b){
+    console.log(a,b);
+}
+sameParam1(2,3); // 2, 3
+sameParam1(7,5); // 7, 5
+
+const a = false; 
+const b = true;
+console.log(a, b); //false, true
+
 // function myFunction1(a, b) {
 //   console.log(a, b);
 // }
@@ -78,6 +120,16 @@
 //  * 
 //  * Add "return"
 //  */
+
+function diff(x, y){
+    return x - y;
+}
+diff(10, 5); //function returns 5, but we see nothing in the console
+console.log(diff(2, 5)); // -3
+console.log(diff(10, 3)); // 7
+console.log(diff("abc", 2)); // NaN 
+console.log(diff()); // NaN -> Parameters "x"and "y" will be automatically assigned values "undefined". Result of undefined +- undefined is NaN - Not a Number
+
 // function sum(a, b) {
 //   return a + b;
 // }
@@ -93,7 +145,20 @@
 //  * EXAMPLE 6
 //  * 
 //  * What happens after "return"?
+//  * Function execution will STOP after RETURN statement
 //  */
+function stopAfterReturnStatement(a){
+    console.log(a);
+    // return a; // function execution STOPS after RETURN !!!
+    console.log(a);
+    const d = 24;
+    console.log(d);
+}
+
+stopAfterReturnStatement(12);
+// console.log(d); // Uncaught ReferenceError: d is not defined
+ 
+
 // function myFunction(a) {
 //   console.log(a);
 //   return a; // function stops here
@@ -113,6 +178,19 @@
 //  * Print to the console result.
 //  * Don't use "return".
 //  */
+
+function multip(x, y, z){
+    const res = x * y * z;
+    console.log(res);
+}
+
+multip(3, 3, 4); //36
+multip(3, 3, 42); //378
+multip(3, 3, "klm"); //NaN
+multip(); //NaN
+console.log(multip(2, 3, 5)); // 30 is printed inside of the function and function returns "undefined"
+
+
 // function mult(a, b, c) {
 //   const result = a * b * c;
 //   console.log(result);
@@ -134,6 +212,14 @@
 //  * Create a function "concatenateStrings" and it will have 2 parameters.
 //  * And this function will return concatenated string.
 //  */
+
+function concatStr(str1, str2){
+    return str1 + " " + str2;
+}
+
+const str3 = concatStr("Guten", "Tag!"); // "Guten Tag!"
+console.log(str3);
+
 // function concatenateStrings(str1, str2) {
 //   return str1 + " " + str2;
 // }
@@ -153,6 +239,22 @@
 //  * Call "innerFunction" with argument that is equal to sum of both parameters of the "outerFunction".
 //  * Log to the console result of the "innerFunction" call.
 //  */
+
+
+function outerFn(a, b){
+    function innerFn(c){
+        return c * c;
+    }
+    const sum = a + b;
+    const res = innerFn(sum);
+    console.log(res);
+}
+
+outerFn(1, 1); // 4
+outerFn(2, 1); // 9
+outerFn(3, 1); //16
+
+
 // function outerFunction(a, b) {
 //   function innerFunction(c) {
 //     return c * c;
