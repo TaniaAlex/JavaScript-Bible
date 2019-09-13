@@ -159,38 +159,38 @@
 // // OR operator || is binary operator
 // // 1) takes first operant and converts to the Boolean
 // // 2) evaluates operant. if true -> stops, if false -> moves to the next operant and evaluates it
-console.log(true || false); // true
-console.log(false || true); // true
+// console.log(true || false); // true
+// console.log(false || true); // true
 
-console.log("abc" || ""); // abc
-console.log("" || "abc"); // abc
-console.log("" || ""); // ""
+// console.log("abc" || ""); // abc
+// console.log("" || "abc"); // abc
+// console.log("" || ""); // ""
 
-// //  Falsy values - after conversion to boolean type will return false
-console.log("" || 0 || null || undefined || NaN || false);
+// // //  Falsy values - after conversion to boolean type will return false
+// console.log("" || 0 || null || undefined || NaN || false);
 
-let city; // when we declare a variable, but not assign a value, the value will be undefined
-const defaultCity = "New York";
+// let city; // when we declare a variable, but not assign a value, the value will be undefined
+// const defaultCity = "New York";
 
-let myCity = city || defaultCity; // undefined OR New York returns New York
-console.log(myCity);
+// let myCity = city || defaultCity; // undefined OR New York returns New York
+// console.log(myCity);
 
-console.log("___");
+// console.log("___");
 
-//log function always return undefined. 
-let myOtherCity = city || console.log("Fill in city please") || defaultCity;
-console.log(myOtherCity);
+// //log function always return undefined. 
+// let myOtherCity = city || console.log("Fill in city please") || defaultCity;
+// console.log(myOtherCity);
 
 
-// // When OR operator finds FIRST TRUESY value it will STOP evaluation -> SHORT-CIRCUIT EVALUATION
-city = "Los Angeles";
+// // // When OR operator finds FIRST TRUESY value it will STOP evaluation -> SHORT-CIRCUIT EVALUATION
+// city = "Los Angeles";
 
-console.log("___");
+// console.log("___");
 
-myCity = city || defaultCity;
-console.log(myCity); // Los Angeles
+// myCity = city || defaultCity;
+// console.log(myCity); // Los Angeles
 
-console.log("___");
+// console.log("___");
 
 
 
@@ -198,36 +198,38 @@ console.log("___");
 
 
 // // AND operator &&
-// console.log(true && false); // false
-// console.log(false && true); // false
+console.log(true && false); // false
+console.log(false && true); // false
 
 // // AND returns value of the first "falsy" operand
-// console.log("abc" && 10 && false && "" && "abcd"); // false
-// console.log("abc" && 10 && NaN && "" && "abcd"); // NaN
-// console.log("abc" && 10 && "" && "abcd"); // ""
+console.log("abc" && 10 && false && "" && "abcd"); // false
+console.log("abc" && 10 && NaN && "" && "abcd"); // NaN
+console.log("abc" && 10 && "" && "abcd"); // ""
 
 // // All operands are "truthy"
-// console.log("abc" && 10 && true && 123 && "Hello World"); // "Hello World"
+// // When all operant evaluated to "true", value of the last operant will be returned. And this value is "truthy".
+console.log("abc" && 10 && true && 123 && "Hello World"); // "Hello World"
 
-// console.log("___");
+console.log("___");
 
 // // NOT operator !
-// console.log(!"abc"); // false
-// console.log(!""); // true
-// console.log(!0); // true
+console.log(!"abc"); // false
+console.log(!""); // true
+console.log(!0); // true
 
-// let myVariable;
-// myVariable = undefined;
-// console.log(!myVariable); // true
+let myVariable;
+myVariable = undefined;
+console.log(!myVariable); // true
 
-// myVariable = "Bogdan";
-// console.log(!myVariable); // false
+myVariable = "Bogdan";
+console.log(!myVariable); // false
 
-// // Quick truthy/falsy check
-// myVariable = null;
-// console.log(!!myVariable); // false
-// myVariable = 10;
-// console.log(!!myVariable); // true
+// NOT NOT operator - Quick truthy/falsy check
+// NOT NOT operator - convert value of any type to boolean
+myVariable = null;
+console.log(!!myVariable); // false
+myVariable = 10;
+console.log(!!myVariable); // true
 
 
 // /**
