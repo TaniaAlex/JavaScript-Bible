@@ -110,37 +110,37 @@
 
 // // Equality operators
 // // NEVER USE "==" and "!=" operators!!! This operators compare only VALUE, not a TYPE
-let myString = "0";
-let myNumber = 0;
-let myBoolean = false;
+// let myString = "0";
+// let myNumber = 0;
+// let myBoolean = false;
 
-// Types of the values may be different
-console.log(myString == myNumber); // true
-console.log(myNumber == myBoolean); // true
-console.log(myString == myBoolean); // true
+// // Types of the values may be different
+// console.log(myString == myNumber); // true
+// console.log(myNumber == myBoolean); // true
+// console.log(myString == myBoolean); // true
 
-// // TYPE and VALUE are compared using STRICT EQUALITY operator
-console.log(myString === myNumber); // false
-console.log(myNumber === myBoolean); // false
-console.log(myString === myBoolean); // false
+// // // TYPE and VALUE are compared using STRICT EQUALITY operator
+// console.log(myString === myNumber); // false
+// console.log(myNumber === myBoolean); // false
+// console.log(myString === myBoolean); // false
 
-// // How you SHOULD compare variables of different types
-console.log(Number(myString) === myNumber); // true
-console.log(+myString === myNumber); // true
+// // // How you SHOULD compare variables of different types
+// console.log(Number(myString) === myNumber); // true
+// console.log(+myString === myNumber); // true
 
-// // Inequality operator
-console.log(myString != myNumber); // false
-console.log(myString !== myNumber); // true
+// // // Inequality operator
+// console.log(myString != myNumber); // false
+// console.log(myString !== myNumber); // true
 
-console.log("____");
+// console.log("____");
 
-console.log(null == undefined); // true
+// console.log(null == undefined); // true
 
-console.log("____");
+// console.log("____");
 
-// left-to-right 
-console.log(null === undefined); // false ... but ...
-console.log(0 === "" === null === undefined === false); // true
+// // left-to-right 
+// console.log(null === undefined); // false ... but ...
+// console.log(0 === "" === null === undefined === false); // true
 // // Explanation: 
 // // 1) 0 === "" -> false
 // // 2) "" === null -> false
@@ -156,37 +156,46 @@ console.log(0 === "" === null === undefined === false); // true
 //  * 
 //  * Logical operators
 //  */
-// // OR operator ||
-// console.log(true || false); // true
-// console.log(false || true); // true
+// // OR operator || is binary operator
+// // 1) takes first operant and converts to the Boolean
+// // 2) evaluates operant. if true -> stops, if false -> moves to the next operant and evaluates it
+console.log(true || false); // true
+console.log(false || true); // true
 
-// console.log("abc" || ""); // abc
-// console.log("" || "abc"); // abc
-// console.log("" || ""); // ""
+console.log("abc" || ""); // abc
+console.log("" || "abc"); // abc
+console.log("" || ""); // ""
 
-// // Falsy values
-// console.log("" || 0 || null || undefined || NaN || false);
+// //  Falsy values - after conversion to boolean type will return false
+console.log("" || 0 || null || undefined || NaN || false);
 
-// let city;
-// const defaultCity = "New York";
+let city; // when we declare a variable, but not assign a value, the value will be undefined
+const defaultCity = "New York";
 
-// let myCity = city || defaultCity;
-// console.log(myCity);
+let myCity = city || defaultCity; // undefined OR New York returns New York
+console.log(myCity);
 
-// console.log("___");
+console.log("___");
 
-// let myOtherCity = city || console.log("Fill in city please") || defaultCity;
-// console.log(myOtherCity);
+//log function always return undefined. 
+let myOtherCity = city || console.log("Fill in city please") || defaultCity;
+console.log(myOtherCity);
 
-// console.log("___");
+
+// // When OR operator finds FIRST TRUESY value it will STOP evaluation -> SHORT-CIRCUIT EVALUATION
+city = "Los Angeles";
+
+console.log("___");
+
+myCity = city || defaultCity;
+console.log(myCity); // Los Angeles
+
+console.log("___");
 
 
-// city = "Los Angeles";
 
-// myCity = city || defaultCity;
-// console.log(myCity);
 
-// console.log("___");
+
 
 // // AND operator &&
 // console.log(true && false); // false
