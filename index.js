@@ -50,25 +50,25 @@
 // console.log(-c); // NaN
 
 // // ++
-let d = 5;
-++d; // Same as d = d + 1
-console.log(d); // 6
-d++;
-console.log(d); // 7
+// let d = 5;
+// ++d; // Same as d = d + 1
+// console.log(d); // 6
+// d++;
+// console.log(d); // 7
 
-// // PREFIX NOTATION OPERANT
-// // Built-in "++" function, when used as PREFIX OPERATOR,  FIRST INCREMENTS value of the operand and SECOND RETURNS value of the operand
-console.log(++d); // 8
-// // POSTFIX NOTATION OPERANT
-// // Built-in "++" function, when used as POSTFIX OPERATOR,  FIRST RETURNS value of the operand and SECOND INCREMENTS value of the operand
-console.log(d++); // 8
-console.log(d); // 9
+// // // PREFIX NOTATION OPERANT
+// // // Built-in "++" function, when used as PREFIX OPERATOR,  FIRST INCREMENTS value of the operand and SECOND RETURNS value of the operand
+// console.log(++d); // 8
+// // // POSTFIX NOTATION OPERANT
+// // // Built-in "++" function, when used as POSTFIX OPERATOR,  FIRST RETURNS value of the operand and SECOND INCREMENTS value of the operand
+// console.log(d++); // 8
+// console.log(d); // 9
 
-// // --
-console.log(d--); // 9
-console.log(d); // 8
-console.log(--d); // 7 - Same as d = d - 1
-console.log(d); // 7
+// // // --
+// console.log(d--); // 9
+// console.log(d); // 8
+// console.log(--d); // 7 - Same as d = d - 1
+// console.log(d); // 7
 
 
 
@@ -76,7 +76,7 @@ console.log(d); // 7
 // /**
 //  * SECTION 2
 //  * 
-//  * Comparison operators
+//  * Comparison operators return true or false
 //  */
 // // Numbers comparison
 // let a, b, c;
@@ -109,36 +109,43 @@ console.log(d); // 7
 // console.log("____");
 
 // // Equality operators
-// // NEVER USE "==" and "!=" operators!!!
-// let myString = "0";
-// let myNumber = 0;
-// let myBoolean = false;
+// // NEVER USE "==" and "!=" operators!!! This operators compare only VALUE, not a TYPE
+let myString = "0";
+let myNumber = 0;
+let myBoolean = false;
 
-// // Types of the values may be different
-// console.log(myString == myNumber); // true
-// console.log(myNumber == myBoolean); // true
-// console.log(myString == myBoolean); // true
+// Types of the values may be different
+console.log(myString == myNumber); // true
+console.log(myNumber == myBoolean); // true
+console.log(myString == myBoolean); // true
 
-// // TYPE and VALUE are compared
-// console.log(myString === myNumber); // false
-// console.log(myNumber === myBoolean); // false
-// console.log(myString === myBoolean); // false
+// // TYPE and VALUE are compared using STRICT EQUALITY operator
+console.log(myString === myNumber); // false
+console.log(myNumber === myBoolean); // false
+console.log(myString === myBoolean); // false
 
 // // How you SHOULD compare variables of different types
-// console.log(Number(myString) === myNumber); // true
-// console.log(+myString === myNumber); // true
+console.log(Number(myString) === myNumber); // true
+console.log(+myString === myNumber); // true
 
-// console.log(myString != myNumber); // false
-// console.log(myString !== myNumber); // true
+// // Inequality operator
+console.log(myString != myNumber); // false
+console.log(myString !== myNumber); // true
 
-// console.log("____");
+console.log("____");
 
-// console.log(null === undefined); // false
-// console.log(null == undefined); // true
+console.log(null == undefined); // true
 
-// console.log("____");
+console.log("____");
 
-// console.log(0 === "" === null === undefined === false); // true
+// left-to-right 
+console.log(null === undefined); // false ... but ...
+console.log(0 === "" === null === undefined === false); // true
+// // Explanation: 
+// // 1) 0 === "" -> false
+// // 2) "" === null -> false
+// // 3) null === undefined -> false
+// // 4) undefined === false -> true !!!!
 
 
 
