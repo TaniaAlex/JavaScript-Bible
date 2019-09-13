@@ -26,6 +26,7 @@ const printBlogPost = setInterval( function(){
         count++;
 }, 2000);
 
+console.log(printBlogPost);
 /**
  * SOLUTION 2 (TUTOR)
  */
@@ -34,6 +35,8 @@ const printMsg = setInterval( function(){
     console.log("Here is message number " + t);
     t = t + 1;
     } ,2000);
+    // clearInterval() use a number as argument, so we have to check if printMsg holds a number
+    console.log(printMsg);
 setTimeout( function(){ 
     clearInterval(printMsg); 
     }, 10000);
