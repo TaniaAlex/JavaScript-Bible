@@ -7,30 +7,37 @@
 // a = 1;
 // b = 2;
 
-// // Math with numbers
-// console.log(a + b); // 3
-// console.log(a * b); // 2
-// console.log(a / b); // 0.5
-// console.log(a - b); // -1
+// // // Math with numbers
+// // console.log(a + b); // 3
+// // console.log(a * b); // 2
+// // console.log(a / b); // 0.5
+// // console.log(a - b); // -1
 
 // a = "abc";
-// b = 5;
+// b = -3;
+// // c = null;
+// // d = undefined;
 
-// // Math with non-numbers
+// // // Math with non-numbers
 // console.log(a + b); // abc5
 // console.log(a * b); // NaN
 // console.log(a / b); // NaN
 // console.log(a - b); // NaN
+// // console.log(c - d); // NaN
+// // console.log(c * d); // NaN
 
-// a = "Hello";
-// b = "World";
 
-// // Strings concatenation
+// a = "Guten";
+// b = "Tag!";
+
+// // // Strings concatenation
+// // // "+" operator can be used for concatenation of the string
 // console.log(a + " " + b);
 
 // let c = "1";
 
-// // Unary plus
+// // // Unary plus
+// // // Can be used to convert string to numbers. Users fill the contact form, ypu process this field. Some of them may containe numbers. But when you read them from the DOM, you get strings. Than you can use UNARY + operator to convert some field like age to numbers.
 // console.log(+c); // 1
 // console.log(Number(c)); // 1
 // c = undefined;
@@ -43,23 +50,25 @@
 // console.log(-c); // NaN
 
 // // ++
-// let d = 5;
-// ++d; // Same as d = d + 1
-// console.log(d); // 6
-// d++;
-// console.log(d); // 7
+let d = 5;
+++d; // Same as d = d + 1
+console.log(d); // 6
+d++;
+console.log(d); // 7
 
-// // Built-in "++" function FIRST increments value of the operand and SECOND returns value of the operand
-// console.log(++d); // 8
-// // Built-in "++" function FIRST returns value of the operand and SECOND increments value of the operand
-// console.log(d++); // 8
-// console.log(d); // 9
+// // PREFIX NOTATION OPERANT
+// // Built-in "++" function, when used as PREFIX OPERATOR,  FIRST INCREMENTS value of the operand and SECOND RETURNS value of the operand
+console.log(++d); // 8
+// // POSTFIX NOTATION OPERANT
+// // Built-in "++" function, when used as POSTFIX OPERATOR,  FIRST RETURNS value of the operand and SECOND INCREMENTS value of the operand
+console.log(d++); // 8
+console.log(d); // 9
 
 // // --
-// console.log(d--); // 9
-// console.log(d); // 8
-// console.log(--d); // 7 - Same as d = d - 1
-// console.log(d); // 7
+console.log(d--); // 9
+console.log(d); // 8
+console.log(--d); // 7 - Same as d = d - 1
+console.log(d); // 7
 
 
 
