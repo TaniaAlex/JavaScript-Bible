@@ -10,7 +10,7 @@
 // console.log(window.a); // 10
 
 // console.log(b); // true
-// console.log(window.b); // undefined
+// console.log(window.b); // undefined 
 
 // const c = "abc";
 
@@ -18,7 +18,7 @@
 // console.log(window.c); // undefined
 
 // function myFunction(a) {
-//   console.log(a); // undefined
+//   console.log(a); // undefined -> there is a parameter "a" in myFunction, so it is considered as a localy scoped variable "a", the same name "a" as global
 //   console.log(b); // true
 // }
 
@@ -37,6 +37,25 @@
 
 // myFunction();
 
+/**
+ * Global scope vs. Function scope
+ */
+
+ let city;
+ let street;
+
+ // function address is impure function - changes variable declared outside of its scope
+ function address() {
+     let street;
+     city = "Frankfurt";
+     street = "Blumen"
+     console.log(street); // Blumen
+     
+ }
+ address();
+
+ console.log(city); // Frankfurt
+ console.log(street); // undefined
 
 // /**
 //  * EXAMPLE 2
@@ -76,6 +95,7 @@
 // function sum(a, b) {
 //   // const c = 3;
 //   function mult(a, b) {
+//     //   return a * b; // 50
 //     return a * b * c; // 100
 //   }
 //   console.log(mult(a, b));
