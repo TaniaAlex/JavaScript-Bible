@@ -1,9 +1,9 @@
 // /**
 //  * EXPRESSIONS
 //  */
-// 10
-// "abc"
-// 5 + 3
+10
+"abc"
+5 + 3
 
 // ;(function(a) {
 //   console.log(a);
@@ -17,7 +17,18 @@
 // let a;
 // a = 10 // Assignment expression
 
-// // 5 = true // Uncaught ReferenceError: Invalid left-hand side in assignment
+// 5 = true // Uncaught ReferenceError: Invalid left-hand side in assignment
+
+let job = {
+    urlaub: true,
+    ueberstunden: false,
+    homeOffice: 1,
+    arbeitsZeit: 38
+
+}
+job.homeOffice = 2;
+// //job{urlaub: true, ueberstunden: false, homeOffice: 2, arbeitsZeit: 38}
+
 
 // 4 <= 10 <= 20 || 5 // true - Logical expression
 
