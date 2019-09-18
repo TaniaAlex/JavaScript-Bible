@@ -27,7 +27,7 @@ let job = {
 
 }
 job.homeOffice = 2;
-// //job{urlaub: true, ueberstunden: false, homeOffice: 2, arbeitsZeit: 38}
+console.log(job) // job{urlaub: true, ueberstunden: false, homeOffice: 2, arbeitsZeit: 38}
 
 
 // 4 <= 10 <= 20 || 5 // true - Logical expression
@@ -35,27 +35,38 @@ job.homeOffice = 2;
 // /**
 //  * STATEMENTS
 //  */
+// Semocolon after statement
+// Semicolon is not required after block of statements
 // let a; // Variable declaration is statement
 
 // a = 3
 
-// function myFunction(b) {
-//   // Quick check that "return" is a statement (not expression)
-//   // console.log(return b); // Uncaught SyntaxError: Unexpected token return
-//   return b;
-// }
+
+// Expressions can br used as arguments in the function call
+
+function myFunction(b) {
+  // Quick check that "return" is a statement (not expression)
+  // console.log(return b); // Uncaught SyntaxError: Unexpected token return
+  return b;
+}
 
 // myFunction(a)
-
-// if (true) {
-//   console.log("Hello from 'if' statement!");
-// } // "if" statement
+// "if" statement
+//NO Semicolon after "if / else" statement
+if (true) {
+  console.log("Hello from 'if' statement!");
+} 
 
 
 // // Quick check that "if" is statement
 // // console.log(if (true) {
 // //   console.log("Hello from 'if' statement!");
 // // }); // Uncaught SyntaxError: Unexpected token if
+
+//for loop
+for (let i = 0; i++; i<5){
+    console.log(i)
+}
 
 // /**
 //  * EXPRESSION STATEMENTS
