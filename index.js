@@ -1,4 +1,121 @@
-// // EXAMPLE 1 - global and function execution contexts
+
+/**
+ * "typeof" and "instanceof" Operators 
+ * are Unary Prefix Operators with one operand
+ */
+// const one = 1;
+// if (typeof one === "number"){
+//     alert ("It is a number!")
+// }
+
+
+ // typeof []    // "object"
+// typeof {}     // "object"
+// typeof null   // "object"
+
+// prototype chain: array -> object
+// const b = [];
+// console.log(b instanceof Array); //true // {}__proto__: Array  
+// console.log(b instanceof Object); //true // {}__proto__: Object  
+
+// const d = {};
+// console.log(d instanceof Array); //false // {}__proto__: Object  
+// console.log(d instanceof Object); //true // {}__proto__: Object  
+
+
+// //Array, Object, String, Number, Boolean are global variables - function constructors and are used to create a new instance of array, object etc.
+// const str1 = "It is a string";
+// console.log(str1 instanceof String); //false   
+
+// const num1 = 398;
+// console.log(num1 instanceof Number); //false   
+
+// const n1 = true;
+// console.log(n1 instanceof Boolean); //false   
+
+
+// // to check if it array use "instanceof Array" operator
+// // to check all other use "typeof" operator
+// const songs = [1, 5, 7, 9];
+// if (songs instanceof Array){
+//     console.log ("It is a array!")
+// }
+ 
+
+// // ******************************
+// // Options to create a new array
+// // Option 1 - Array literal notation 
+// const mArr1 = [];
+// console.log(mArr1);
+// const mArr3 = [1,2,5];
+// console.log(mArr3);
+
+// // Option 2 - Array function constructor
+// const mArr2 = new Array();
+// console.log(mArr2);
+// const mArr4 = new Array(1,2,5);
+// console.log(mArr4);
+
+
+// // ******************************
+// // Options to create a new String
+// // Option 1 - String literal notation 
+// const mStr3 = "string3";
+// console.log(mStr3); // abc // primitive value
+// console.log(typeof mStr3); // string
+// console.log(mStr3 instanceof Object ); // false
+// console.log(mStr3 instanceof String ); // false
+// // but you can still call all the methods of the String Prototype. Variable string3  still holds Primitive Value and will be converted to the instance of String only for purpose of using methods that belong to String Prototype
+// console.log(mStr3.toUpperCase()) // ABC
+// console.log(mStr3.length) // 7
+
+// // Option 2 - String function constructor
+// const mStr4 = new String("string4"); 
+//  console.log(mStr4); // String {"string4"} // is object // 
+//                     //__proto__: Object
+//                     // [[PrimitiveValue]]: ""
+//                     // [[PrimitiveValue]]: "string4"
+// console.log(typeof mStr4); // object
+// console.log(mStr4 instanceof Object ); // true
+// console.log(mStr4 instanceof String ); // true
+
+// // here you can use all the methods of String Prototype
+// console.log(mStr4.toUpperCase())
+// console.log(mStr3.length) // 7
+
+// ******************************
+//Create an Object using "new" keyword and call Object() function
+// const mObj1 = new Object({a: 20, b: 34});
+
+// // Create an Object using object literal
+// const mObj2 = {a: 10, b: 23};
+// console.log(mObj1);  
+// console.log(mObj2); 
+// console.log(typeof mObj1); // object
+// console.log(mObj1 instanceof Object ); // true
+// console.log(mObj1 instanceof Function ); // false
+
+
+
+// const mFn1 = new Function("b", "console.log(b);");
+// console.log(typeof mFn1); // function
+// console.log(mFn1 instanceof Object ); // true
+// console.log(mFn1 instanceof Function ); // true
+// mFn1("function1 created with NEW Keyword")
+
+
+
+// const mFn2 = function(a){
+//     console.log(a)
+// };
+// mFn2("function2");
+// console.log(typeof mFn2); // function
+// console.log(mFn2 instanceof Object ); // true
+// console.log(mFn2 instanceof Function ); // true
+
+
+// ******************************
+// // EXAMPLE 1.1 - global and function execution contexts
 // // Global execution context
 // console.log("This is global execution context");
 
@@ -16,7 +133,7 @@
 // console.log(myFunction(3, 5)); // new function execution context is created
 
 
-
+// ******************************
 // // EXAMPLE 2 - Execution contexts stack
 
 // console.log("Global execution context - root level in the stack");
