@@ -1,8 +1,17 @@
+/**
+ *
+ * CLOSURES
+ * Closure is created when specific function returns other function
+ *
+ * in console.dir you can see [[Scopes]]: Closure, Script, Global
+ *
+ */
+
 function outerFn(mult) {
   const a = 10;
 
   function innerFn(b) {
-    console.dir(innerFn);
+    console.dir(innerFn); //
     return (a + b) * mult;
   }
 
