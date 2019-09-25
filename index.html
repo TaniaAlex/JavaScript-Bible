@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <title>JavaScript Basics</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="icon" type="image/png" href="favicon.png">
-  <title>JavaScript Basics</title>
-</head>
-
-<body>
-  <script src="index.js"></script>
-</body>
-
+  <body>
+    <!-- with "this" you can easyly access different event handlers such as "onclick", "onchange" attached to the different DOM elements -->
+    <button onClick="console.dir(this.textContent)">Download</button>
+    <!--  -->
+    <button onclick="console.dir(this.textContent)">Upload</button>
+    <!--  console.dir(this) -->
+    <input type="text" onchange="console.dir(this)" />
+    <input type="text" onchange="console.dir(this.value)" />
+    <script src="index.js"></script>
+  </body>
 </html>
